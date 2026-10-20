@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowly Beauty & More | متجر التجميل والعناية</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <p>✨ توصيل مجاني لجميع الطلبات الفوق 300 درهم في جميع مدن المغرب! 🇲🇦</p>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="logo">
+        <a href="#home">Glowly <span>Beauty</span></a>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">الرئيسية</a>
+        <a href="#shop" class="nav-link">المتجر</a>
+        <a href="#categories" class="nav-link">الفئات</a>
+        <a href="#about" class="nav-link">من نحن</a>
+        <a href="#contact" class="nav-link">اتصل بنا</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="بحث عن منتج...">
+          <button id="searchBtn" aria-label="بحث">🔍</button>
+        </div>
+        <button class="account-btn" id="accountBtn" title="حسابي (قريباً)">👤</button>
+        <button class="cart-btn" id="cartBtn" aria-label="عربة التسوق">
+          🛍️ <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  <main>
+    <!-- Hero Banner Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-content">
+        <span class="hero-subtitle">تشكيلة التجميل والعناية الفاخرة</span>
+        <h1>إطلالة ساحرة ومنتجات طبيعية 100%</h1>
+        <p>اكتشفي أفضل مستحضرات التجميل، أطقم العناية بالبشرة والزيوت المغذية المعتمدة لجمالك اليومي.</p>
+        <a href="#shop" class="btn btn-primary">تسوقي الآن 🌸</a>
+      </div>
+    </section>
+
+    <!-- Circular Categories Section -->
+    <section class="categories-section" id="categories">
+      <div class="section-title">
+        <h2>تسوقي حسب الفئة</h2>
+        <p>اختاري ما يناسب احتياجاتك اليومية</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card" data-category="all">
+          <div class="category-icon">✨</div>
+          <span>الكل</span>
+        </div>
+        <div class="category-card" data-category="skincare">
+          <div class="category-icon">🧴</div>
+          <span>العناية بالبشرة</span>
+        </div>
+        <div class="category-card" data-category="makeup">
+          <div class="category-icon">💄</div>
+          <span>المكياج</span>
+        </div>
+        <div class="category-card" data-category="hair">
+          <div class="category-icon">💇‍♀️</div>
+          <span>العناية بالشعر</span>
+        </div>
+        <div class="category-card" data-category="perfume">
+          <div class="category-icon">🌸</div>
+          <span>العطور</span>
+        </div>
+        <div class="category-card" data-category="accessories">
+          <div class="category-icon">💅</div>
+          <span>الأكسسوارات والأظافر</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🚚</div>
+          <h3>توصيل سريع</h3>
+          <p>توصيل لجميع المدن المغربية خلال 24-48 ساعة</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💵</div>
+          <h3>الدفع عند الاستلام</h3>
+          <p>لا تدفع شيئاً حتى تستلم طلبك وتتفحصه</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌿</div>
+          <h3>جودة مضمونة</h3>
+          <p>منتجات طبيعية ومختارة بعناية فائقة</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💬</div>
+          <h3>دعم عبر الواتساب</h3>
+          <p>فريقنا في الخدمة للإجابة عن أسئلتكم</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers / Products Section -->
+    <section class="products-section" id="shop">
+      <div class="section-title">
+        <h2>أفضل المنتجات مبيعاً</h2>
+        <p>المنتجات الأكثر طلباً من قبل زبنائنا</p>
+      </div>
+
+      <!-- Controls Filter & Sort -->
+      <div class="products-controls">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">الكل</button>
+          <button class="filter-btn" data-filter="skincare">العناية بالبشرة</button>
+          <button class="filter-btn" data-filter="makeup">المكياج</button>
+          <button class="filter-btn" data-filter="hair">الشعر</button>
+          <button class="filter-btn" data-filter="perfume">العطور</button>
+        </div>
+        <div class="sort-wrapper">
+          <label for="sortSelect">ترتيب حسب: </label>
+          <select id="sortSelect">
+            <option value="default">الافتراضي</option>
+            <option value="price-low">السعر: من الأقل للأعلى</option>
+            <option value="price-high">السعر: من الأعلى للأقل</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- JS populates product cards here -->
+      </div>
+    </section>
+
+    <!-- Promo Banners -->
+    <section class="promo-banners">
+      <div class="promo-card promo-makeup">
+        <div class="promo-content">
+          <span>عروض خاصة</span>
+          <h3>أطقم المكياج المتكاملة</h3>
+          <p>خصومات تصل إلى 30% هذا الأسبوع</p>
+          <a href="#shop" class="btn btn-secondary">اكتشفي المزيد</a>
+        </div>
+      </div>
+      <div class="promo-card promo-skincare">
+        <div class="promo-content">
+          <span>عناية طبيعية</span>
+          <h3>مجموعات النيلة والزيوت</h3>
+          <p>لإشراقة طبيعية وبشرة صحية</p>
+          <a href="#shop" class="btn btn-secondary">اكتشفي المزيد</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <h2>عن Glowly Beauty & More</h2>
+        <p>نحن متجر مغربي متحرّص على تقديم أفضل مستحضرات التجميل والعناية بالبشرة والشعر المصنوعة بمكونات طبيعية وأمنة 100%. هدفنا هو إبراز جمالك الطبيعي بأعلى جودة وأنسب الأسعار مع خدمة توصيل سريعة وموثوقة لكافة المدن المغربية.</p>
+      </div>
+    </section>
+
+    <!-- Contact & Social Section -->
+    <section class="contact-section" id="contact">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>تواصل معنا</h2>
+          <p>هل لديك أي استفسار؟ فريقنا جاهز لمساعدتك دائماً.</p>
+          <ul>
+            <li>📍 <strong>العنوان:</strong> طنجة / تطوان - المغرب</li>
+            <li>📞 <strong>الهاتف / الواتساب:</strong> <a href="https://wa.me/212600000000" id="contactPhoneLink" target="_blank">+212 600-000000</a></li>
+            <li>✉️ <strong>البريد الإلكتروني:</strong> contact@glowlybeauty.ma</li>
+          </ul>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">📸 انستغرام</a>
+            <a href="#" aria-label="Facebook">📘 فيسبوك</a>
+            <a href="#" aria-label="TikTok">🎵 تيك توك</a>
+          </div>
+        </div>
+        <div class="newsletter-box">
+          <h3>اشتركي في النشرة البريدية</h3>
+          <p>احصلي على خصم 10% على أول طلب لكِ وأحدث العروض</p>
+          <form id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="أدخلي بريدك الإلكتروني..." required>
+            <button type="submit" class="btn btn-primary">اشتراك</button>
+          </form>
+          <div id="newsletterMessage" class="form-message"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Glowly Beauty & More. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <!-- Slide-in Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>عربة التسوق 🛍️</h2>
+      <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <!-- Cart items loaded via JS -->
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total-row">
+        <span>المجموع الفرعي:</span>
+        <span id="cartSubtotal">0 DH</span>
+      </div>
+      <button class="btn btn-primary btn-block" id="proceedCheckoutBtn">إتمام الطلب 🛒</button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeCheckoutBtn">&times;</button>
+      <h2>معلومات الشحن وإتمام الطلب</h2>
+      
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="custName">الاسم الكامل *</label>
+          <input type="text" id="custName" placeholder="مثال: فاطمة الزهراء" required>
+        </div>
+
+        <div class="form-group">
+          <label for="custPhone">رقم الهاتف (مغربي) *</label>
+          <input type="tel" id="custPhone" placeholder="0612345678 أو 0712345678" required>
+        </div>
+
+        <div class="form-group">
+          <label for="custCity">المدينة *</label>
+          <input type="text" id="custCity" placeholder="مثال: الدار البيضاء، طنجة، الرباط..." required>
+        </div>
+
+        <div class="form-group">
+          <label for="custAddress">العنوان الكامل للعنوان *</label>
+          <textarea id="custAddress" rows="2" placeholder="الشارع، الحي، رقم المنزل..." required></textarea>
+        </div>
+
+        <div class="payment-methods">
+          <label>طريقة الدفع:</label>
+          <div class="radio-option">
+            <input type="radio" id="payCOD" name="paymentMethod" value="COD" checked>
+            <label for="payCOD">💵 الدفع عند الاستلام (Cash on Delivery)</label>
+          </div>
+          <div class="radio-option disabled-option">
+            <input type="radio" id="payCard" name="paymentMethod" value="CARD" disabled>
+            <label for="payCard">💳 الدفع بالبطاقة البنكية (غير متاح حالياً)</label>
+          </div>
+          <p class="payment-note">ملاحظة: خيار الدفع الإلكتروني بالبطاقة يتطلب تفعيل بوابة دفع بنكية معتمدة مستقبلاً.</p>
+        </div>
+
+        <div class="order-summary-box">
+          <h4>ملخص الطلب:</h4>
+          <div id="checkoutItemsSummary"></div>
+          <div class="summary-line">
+            <span>رسوم التوصيل:</span>
+            <span id="shippingFee">30 DH</span>
+          </div>
+          <div class="summary-line total-line">
+            <span>المجموع النهائي:</span>
+            <span id="finalTotal">0 DH</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">تأكيد الطلب عبر واتساب 📲</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
